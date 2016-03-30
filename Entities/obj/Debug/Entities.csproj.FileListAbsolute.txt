@@ -2,3 +2,8 @@ C:\Work\CodeChallenge\Entities\bin\Debug\Entities.dll
 C:\Work\CodeChallenge\Entities\bin\Debug\Entities.pdb
 C:\Work\CodeChallenge\Entities\obj\Debug\Entities.dll
 C:\Work\CodeChallenge\Entities\obj\Debug\Entities.pdb
+C:\Work\CodeChallenge\codechallenge\Entities\bin\Debug\Entities.dll
+C:\Work\CodeChallenge\codechallenge\Entities\bin\Debug\Entities.pdb
+C:\Work\CodeChallenge\codechallenge\Entities\obj\Debug\Entities.dll
+C:\Work\CodeChallenge\codechallenge\Entities\obj\Debug\Entities.pdb
+C:\Work\CodeChallenge\codechallenge\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache

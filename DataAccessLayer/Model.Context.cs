@@ -25,7 +25,7 @@ namespace DataAccessLayer
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Node> Nodes { get; set; }
         public DbSet<Line> Lines { get; set; }
+        public DbSet<Node> Nodes { get; set; }
     }
 }

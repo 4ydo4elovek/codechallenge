@@ -25,6 +25,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdUnique" Type="nvarchar" Nullable="false" MaxLength="10" />
     <Property Name="Label" Type="nvarchar(max)" />
   </EntityType>
   <Association Name="FK_NodesIdFrom">

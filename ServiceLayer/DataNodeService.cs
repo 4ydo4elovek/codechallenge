@@ -9,12 +9,14 @@ namespace ServiceLayer
         {
             foreach (var node in nodes)
             {
-                NodesDAL.AddOrUpdate(node);
+                node.Id = NodesDAL.AddOrUpdate(node);
             }
             foreach (var node in nodes)
             {
                 foreach (var line in node.Lines)
                 {
+                    line.NodeIdFrom = node.Id;
+                    line.NodeIdTo = NodesDAL.Get(line.NodeIdToUnique).Id;
                     LinesDAL.AddOrUpdate(line);
                 }
             }

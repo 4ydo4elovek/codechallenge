@@ -5,8 +5,10 @@ go
 create table Nodes
 (
 	Id int not null identity constraint PK_Nodes primary key,
+	IdUnique nvarchar(10) not null unique,
 	Label nvarchar(max)
 )
+use Graph
 go
 create table Lines
 (

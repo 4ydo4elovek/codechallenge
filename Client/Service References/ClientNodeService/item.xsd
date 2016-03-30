@@ -8,6 +8,7 @@
   <xs:element name="ArrayOfNode" nillable="true" type="tns:ArrayOfNode" />
   <xs:complexType name="Node">
     <xs:sequence>
+      <xs:element name="_x003C_IdUnique_x003E_k__BackingField" nillable="true" type="xs:string" />
       <xs:element name="_x003C_Id_x003E_k__BackingField" type="xs:int" />
       <xs:element name="_x003C_Label_x003E_k__BackingField" nillable="true" type="xs:string" />
       <xs:element name="_x003C_Lines_x003E_k__BackingField" nillable="true" type="tns:ArrayOfLine" />
@@ -24,7 +25,9 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="NodeIdFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="NodeIdFromUnique" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="NodeIdTo" type="xs:int" />
+      <xs:element minOccurs="0" name="NodeIdToUnique" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Line" nillable="true" type="tns:Line" />

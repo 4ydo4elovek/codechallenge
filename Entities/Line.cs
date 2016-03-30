@@ -8,6 +8,10 @@
 
         public int NodeIdTo { get; set; }
 
+        public string NodeIdFromUnique { get; set; }
+               
+        public string NodeIdToUnique { get; set; }
+
         public Line()
         { }
 

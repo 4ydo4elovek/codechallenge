@@ -21,6 +21,7 @@ namespace DataAccessLayer
         }
     
         public int Id { get; set; }
+        public string IdUnique { get; set; }
         public string Label { get; set; }
     
         public virtual ICollection<Line> Lines { get; set; }

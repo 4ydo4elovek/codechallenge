@@ -14,7 +14,8 @@ namespace ServiceLayer
             {
                 foreach (var line in node.Lines)
                 {
-                    arr[line.NodeIdTo - 1, line.NodeIdFrom - 1] = arr[line.NodeIdTo - 1, line.NodeIdFrom - 1] = 1;
+                    if (line.NodeIdFrom != line.NodeIdTo)
+                        arr[line.NodeIdTo - 1, line.NodeIdFrom - 1] = arr[line.NodeIdFrom - 1, line.NodeIdTo- 1] = 1;
                 }
             }
 

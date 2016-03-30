@@ -1,5 +1,5 @@
 ﻿using System.Web.Mvc;
-using Client.NodeService;
+using Client.ClientNodeService;
 using Client.AlgorithmClient;
 
 namespace Client.Controllers

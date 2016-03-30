@@ -1,19 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="Хранилище GraphModelContainer" CdmEntityContainer="GraphEntities">
-    <EntitySetMapping Name="Nodes">
-      <EntityTypeMapping TypeName="GraphModel.Node">
-        <MappingFragment StoreEntitySet="Nodes">
-          <ScalarProperty Name="Label" ColumnName="Label" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Lines">
       <EntityTypeMapping TypeName="GraphModel.Line">
         <MappingFragment StoreEntitySet="Lines">
           <ScalarProperty Name="NodeIdTo" ColumnName="NodeIdTo" />
           <ScalarProperty Name="NodeIdFrom" ColumnName="NodeIdFrom" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nodes">
+      <EntityTypeMapping TypeName="GraphModel.Node">
+        <MappingFragment StoreEntitySet="Nodes">
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="IdUnique" ColumnName="IdUnique" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

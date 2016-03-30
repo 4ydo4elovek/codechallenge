@@ -1,7 +1,6 @@
 ﻿var node1;
 var node2;
 
-
 $.ajax({
     url: "/home/getnodes",
     type: "POST",

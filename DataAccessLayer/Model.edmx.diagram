@@ -5,8 +5,8 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="95a4e229c666490faf9ab7b329548d37" Name="Диаграмма1" ZoomLevel="86" >
-        <EntityTypeShape EntityType="GraphModel.Node" Width="1.5" PointX="4.1408291757762568" PointY="1.4353142685421343" />
         <EntityTypeShape EntityType="GraphModel.Line" Width="1.5" PointX="6.9474209914670428" PointY="7.8045187330825812" />
+        <EntityTypeShape EntityType="GraphModel.Node" Width="1.5" PointX="1.1441961904727835" PointY="2.0976599464647752" />
         <AssociationConnector Association="GraphModel.FK_NodesIdFrom" />
         <AssociationConnector Association="GraphModel.FK_NodesIdTo" />
         </Diagram>

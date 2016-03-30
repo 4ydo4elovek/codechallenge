@@ -69,7 +69,7 @@ namespace DataLoader
                 Console.WriteLine("Specify path to the directory:");
                 var path = Console.ReadLine();
 
-                path = @"C:\Work\CodeChallenge\nodes\";
+                path = @"C:\Work\CodeChallenge\codechallenge\nodes\";
 
                 if (!string.IsNullOrEmpty(path))
                 {
@@ -89,7 +89,7 @@ namespace DataLoader
                 {
                     if (xnode.Name == "id")
                     {
-                        node.Id = int.Parse(xnode.InnerText);
+                        node.IdUnique = xnode.InnerText;
                     }
                     else if (xnode.Name == "label")
                     {
@@ -101,8 +101,8 @@ namespace DataLoader
                         {
                             node.Lines.Add(new Line
                             {
-                                NodeIdFrom = node.Id,
-                                NodeIdTo = int.Parse(childNode.InnerText)
+                                NodeIdFromUnique = node.IdUnique,
+                                NodeIdToUnique = childNode.InnerText
                             });
                         }
                     }

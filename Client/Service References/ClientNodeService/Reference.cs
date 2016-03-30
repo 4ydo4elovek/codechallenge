@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Client.NodeService {
+namespace Client.ClientNodeService {
     using System.Runtime.Serialization;
     using System;
     
@@ -22,11 +22,13 @@ namespace Client.NodeService {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
+        private string IdUniquek__BackingFieldField;
+        
         private int Idk__BackingFieldField;
         
         private string Labelk__BackingFieldField;
         
-        private Client.NodeService.Line[] Linesk__BackingFieldField;
+        private Client.ClientNodeService.Line[] Linesk__BackingFieldField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -35,6 +37,19 @@ namespace Client.NodeService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="<IdUnique>k__BackingField", IsRequired=true)]
+        public string IdUniquek__BackingField {
+            get {
+                return this.IdUniquek__BackingFieldField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdUniquek__BackingFieldField, value) != true)) {
+                    this.IdUniquek__BackingFieldField = value;
+                    this.RaisePropertyChanged("IdUniquek__BackingField");
+                }
             }
         }
         
@@ -65,7 +80,7 @@ namespace Client.NodeService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Name="<Lines>k__BackingField", IsRequired=true)]
-        public Client.NodeService.Line[] Linesk__BackingField {
+        public Client.ClientNodeService.Line[] Linesk__BackingField {
             get {
                 return this.Linesk__BackingFieldField;
             }
@@ -103,7 +118,13 @@ namespace Client.NodeService {
         private int NodeIdFromField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NodeIdFromUniqueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int NodeIdToField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NodeIdToUniqueField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -142,6 +163,19 @@ namespace Client.NodeService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NodeIdFromUnique {
+            get {
+                return this.NodeIdFromUniqueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NodeIdFromUniqueField, value) != true)) {
+                    this.NodeIdFromUniqueField = value;
+                    this.RaisePropertyChanged("NodeIdFromUnique");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int NodeIdTo {
             get {
                 return this.NodeIdToField;
@@ -150,6 +184,19 @@ namespace Client.NodeService {
                 if ((this.NodeIdToField.Equals(value) != true)) {
                     this.NodeIdToField = value;
                     this.RaisePropertyChanged("NodeIdTo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NodeIdToUnique {
+            get {
+                return this.NodeIdToUniqueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NodeIdToUniqueField, value) != true)) {
+                    this.NodeIdToUniqueField = value;
+                    this.RaisePropertyChanged("NodeIdToUnique");
                 }
             }
         }
@@ -165,23 +212,23 @@ namespace Client.NodeService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="NodeService.IClientNodeService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ClientNodeService.IClientNodeService")]
     public interface IClientNodeService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientNodeService/GetNodes", ReplyAction="http://tempuri.org/IClientNodeService/GetNodesResponse")]
-        Client.NodeService.Node[] GetNodes();
+        Client.ClientNodeService.Node[] GetNodes();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientNodeService/GetNodes", ReplyAction="http://tempuri.org/IClientNodeService/GetNodesResponse")]
-        System.Threading.Tasks.Task<Client.NodeService.Node[]> GetNodesAsync();
+        System.Threading.Tasks.Task<Client.ClientNodeService.Node[]> GetNodesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IClientNodeServiceChannel : Client.NodeService.IClientNodeService, System.ServiceModel.IClientChannel {
+    public interface IClientNodeServiceChannel : Client.ClientNodeService.IClientNodeService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ClientNodeServiceClient : System.ServiceModel.ClientBase<Client.NodeService.IClientNodeService>, Client.NodeService.IClientNodeService {
+    public partial class ClientNodeServiceClient : System.ServiceModel.ClientBase<Client.ClientNodeService.IClientNodeService>, Client.ClientNodeService.IClientNodeService {
         
         public ClientNodeServiceClient() {
         }
@@ -202,11 +249,11 @@ namespace Client.NodeService {
                 base(binding, remoteAddress) {
         }
         
-        public Client.NodeService.Node[] GetNodes() {
+        public Client.ClientNodeService.Node[] GetNodes() {
             return base.Channel.GetNodes();
         }
         
-        public System.Threading.Tasks.Task<Client.NodeService.Node[]> GetNodesAsync() {
+        public System.Threading.Tasks.Task<Client.ClientNodeService.Node[]> GetNodesAsync() {
             return base.Channel.GetNodesAsync();
         }
     }

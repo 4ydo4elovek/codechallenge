@@ -20,7 +20,8 @@ namespace Client.Controllers
 
         public ActionResult GetShortestPath(int from, int to)
         {
-            return Json(AlgorithmClient.GetShortestPath(from, to));
+            var res = AlgorithmClient.GetShortestPath(from, to);
+            return Json(res);
         }
     }
 }
