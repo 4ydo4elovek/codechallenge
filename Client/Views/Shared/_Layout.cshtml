@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/Content/site.css"/>
+    <link rel="stylesheet" href="/Content/vis.min.css"/>
+</head>
+<body>
+    @RenderBody()
+    
+    <script src="/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="/Scripts/vis.min.js"></script>
+    <script src="/Scripts/common.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

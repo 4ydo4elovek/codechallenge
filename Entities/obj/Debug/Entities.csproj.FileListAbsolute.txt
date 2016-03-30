@@ -1,0 +1,4 @@
+C:\Work\CodeChallenge\Entities\bin\Debug\Entities.dll
+C:\Work\CodeChallenge\Entities\bin\Debug\Entities.pdb
+C:\Work\CodeChallenge\Entities\obj\Debug\Entities.dll
+C:\Work\CodeChallenge\Entities\obj\Debug\Entities.pdb

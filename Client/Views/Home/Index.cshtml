@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Graph Visualisation";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div id="mynetwork" style="width: 100%; border: 1px solid red; height: 300px;"></div>
+
+<input type="button" id="btnCalclulatePath" style="margin: 10px auto 0; padding: 10px; width: 200px; display: block;" value="Calculate shortest path" />
+<div class="nodes" style="width: 200px; margin: 10px auto 0; font-size: 20px;">
+    From: <span id="node1"></span> <br/>
+    To: <span id="node2"></span>
+</div>

@@ -1,0 +1,5 @@
+C:\Work\CodeChallenge\DijkstrasAlgorithm\bin\Debug\DijkstrasAlgorithm.dll
+C:\Work\CodeChallenge\DijkstrasAlgorithm\bin\Debug\DijkstrasAlgorithm.pdb
+C:\Work\CodeChallenge\DijkstrasAlgorithm\obj\Debug\DijkstrasAlgorithm.csprojResolveAssemblyReference.cache
+C:\Work\CodeChallenge\DijkstrasAlgorithm\obj\Debug\DijkstrasAlgorithm.dll
+C:\Work\CodeChallenge\DijkstrasAlgorithm\obj\Debug\DijkstrasAlgorithm.pdb

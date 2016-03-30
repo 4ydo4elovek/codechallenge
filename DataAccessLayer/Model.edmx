@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище GraphModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="Хранилище GraphModelContainer">
+          <EntitySet Name="Lines" EntityType="Хранилище GraphModel.Lines" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Nodes" EntityType="Хранилище GraphModel.Nodes" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_NodesIdFrom" Association="Хранилище GraphModel.FK_NodesIdFrom">
+            <End Role="Nodes" EntitySet="Nodes" />
+            <End Role="Lines" EntitySet="Lines" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NodesIdTo" Association="Хранилище GraphModel.FK_NodesIdTo">
+            <End Role="Nodes" EntitySet="Nodes" />
+            <End Role="Lines" EntitySet="Lines" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Lines">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NodeIdFrom" Type="int" Nullable="false" />
+          <Property Name="NodeIdTo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Nodes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Label" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_NodesIdFrom">
+          <End Role="Nodes" Type="Хранилище GraphModel.Nodes" Multiplicity="1" />
+          <End Role="Lines" Type="Хранилище GraphModel.Lines" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nodes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lines">
+              <PropertyRef Name="NodeIdFrom" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NodesIdTo">
+          <End Role="Nodes" Type="Хранилище GraphModel.Nodes" Multiplicity="1" />
+          <End Role="Lines" Type="Хранилище GraphModel.Lines" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nodes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lines">
+              <PropertyRef Name="NodeIdTo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GraphModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="GraphEntities" p1:LazyLoadingEnabled="true" >
+          <EntitySet Name="Nodes" EntityType="GraphModel.Node" />
+          <EntitySet Name="Lines" EntityType="GraphModel.Line" />
+          <AssociationSet Name="FK_NodesIdFrom" Association="GraphModel.FK_NodesIdFrom">
+            <End Role="Node" EntitySet="Nodes" />
+            <End Role="Line" EntitySet="Lines" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NodesIdTo" Association="GraphModel.FK_NodesIdTo">
+            <End Role="Node" EntitySet="Nodes" />
+            <End Role="Line" EntitySet="Lines" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Node">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Label" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Lines" Relationship="GraphModel.FK_NodesIdFrom" FromRole="Node" ToRole="Line" />
+          <NavigationProperty Name="Lines1" Relationship="GraphModel.FK_NodesIdTo" FromRole="Node" ToRole="Line" />
+          </EntityType>
+        <EntityType Name="Line">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="NodeIdFrom" Nullable="false" />
+          <Property Type="Int32" Name="NodeIdTo" Nullable="false" />
+          <NavigationProperty Name="Node" Relationship="GraphModel.FK_NodesIdFrom" FromRole="Line" ToRole="Node" />
+          <NavigationProperty Name="Node1" Relationship="GraphModel.FK_NodesIdTo" FromRole="Line" ToRole="Node" />
+        </EntityType>
+        <Association Name="FK_NodesIdFrom">
+          <End Type="GraphModel.Node" Role="Node" Multiplicity="1" />
+          <End Type="GraphModel.Line" Role="Line" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Node">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Line">
+              <PropertyRef Name="NodeIdFrom" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NodesIdTo">
+          <End Type="GraphModel.Node" Role="Node" Multiplicity="1" />
+          <End Type="GraphModel.Line" Role="Line" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Node">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Line">
+              <PropertyRef Name="NodeIdTo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище GraphModelContainer" CdmEntityContainer="GraphEntities" >
+          <EntitySetMapping Name="Nodes">
+            <EntityTypeMapping TypeName="GraphModel.Node">
+              <MappingFragment StoreEntitySet="Nodes">
+                <ScalarProperty Name="Label" ColumnName="Label" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lines">
+            <EntityTypeMapping TypeName="GraphModel.Line">
+              <MappingFragment StoreEntitySet="Lines">
+                <ScalarProperty Name="NodeIdTo" ColumnName="NodeIdTo" />
+                <ScalarProperty Name="NodeIdFrom" ColumnName="NodeIdFrom" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
