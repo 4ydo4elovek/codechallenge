@@ -10,15 +10,3 @@ C:\Work\CodeChallenge\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
 C:\Work\CodeChallenge\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 C:\Work\CodeChallenge\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Work\CodeChallenge\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
-C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Debug\DataAccessLayer.dll
-C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
-C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Debug\Entities.dll
-C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Debug\EntityFramework.dll
-C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
-C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Debug\Entities.pdb
-C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Debug\EntityFramework.xml
-C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
-C:\Work\CodeChallenge\codechallenge\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
-C:\Work\CodeChallenge\codechallenge\DataAccessLayer\obj\Debug\DataAccessLayer.dll
-C:\Work\CodeChallenge\codechallenge\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
