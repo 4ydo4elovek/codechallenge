@@ -66,7 +66,12 @@ $("#btnCalclulatePath").click(function () {
             data: data,
             dataType: "json",
             success: function(result) {
-
+                $("#length").html(result.length + " lines");
+                var path ="";
+                $(result.nodes).each(function (i, e) {
+                    path += e.Labelk__BackingField + " ";
+                });
+                $("#how").html(path);
             }
         });
     } else {

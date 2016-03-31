@@ -1,0 +1,12 @@
+C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Release\DataAccessLayer.dll.config
+C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Release\DataAccessLayer.dll
+C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Release\Entities.dll
+C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Release\EntityFramework.dll
+C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Release\Entities.pdb
+C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Release\EntityFramework.xml
+C:\Work\CodeChallenge\codechallenge\DataAccessLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Work\CodeChallenge\codechallenge\DataAccessLayer\obj\Release\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Work\CodeChallenge\codechallenge\DataAccessLayer\obj\Release\DataAccessLayer.dll
+C:\Work\CodeChallenge\codechallenge\DataAccessLayer\obj\Release\DataAccessLayer.pdb

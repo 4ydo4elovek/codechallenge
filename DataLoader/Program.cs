@@ -1,36 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.ServiceModel;
-using System.Threading;
+using System.Linq;
 using System.Xml;
-using Entities;
-using ServiceLayer;
+using Line = Entities.Line;
+using Node = Entities.Node;
 
 namespace DataLoader
 {
     internal class Program
     {
+        private static DataNodeServiceClient.DataNodeServiceClient dataClient;
+
         private static void Main()
         {
             var nodes = LoadNodes();
-            var data = new DataNodeService();
-            data.SaveNodes(nodes);
 
-            var algo = new AlgorithmService();
-            algo.GetShortestPath(9, 7);
-
-            var t = new Thread(Run);
-            t.IsBackground = false;
-            t.Start();
-
-            using (var host = new ServiceHost(typeof(ClientNodeService)))
+            using (var client = new DataNodeServiceClient.DataNodeServiceClient("BasicHttpBinding_IDataNodeService"))
             {
-                host.Open();
+                Console.WriteLine("Data host started...");
+                Console.WriteLine("--------------------------------");
 
-                Console.WriteLine("--------------------------------");
-                Console.WriteLine("Host with data started...");
-                Console.WriteLine("--------------------------------");
+                client.SaveNodes(nodes.ToArray());
 
                 var s = string.Empty;
                 do
@@ -41,23 +32,12 @@ namespace DataLoader
                     switch (s)
                     {
                         case "1":
-                            data.SaveNodes(LoadNodes());
+                            nodes = LoadNodes();
+                            client.SaveNodes(nodes.ToArray());;
+                            Console.WriteLine("-Success-");
                             break;
                     }
-                } while (s != "1" && s != "2");
-            }
-        }
-
-        public static void Run()
-        {
-            using (var host = new ServiceHost(typeof (AlgorithmService)))
-            {
-                host.Open();
-
-                Console.WriteLine("--------------------------------");
-                Console.WriteLine("Host with algroritm started...");
-                Console.WriteLine("--------------------------------");
-                Console.ReadLine();
+                } while (s != "2");
             }
         }
 

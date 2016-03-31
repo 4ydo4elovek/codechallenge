@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,10 +54,27 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\DataNodeServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
+    <None Include="Service References\DataNodeServiceClient\DataNodeService.wsdl" />
+    <None Include="Service References\DataNodeServiceClient\DataNodeService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataNodeServiceClient\DataNodeService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataNodeServiceClient\DataNodeService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -66,10 +84,24 @@
       <Project>{6103486b-ade2-48cb-990e-0ffa587d7390}</Project>
       <Name>Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServiceLayer\ServicesLayer.csproj">
-      <Project>{78230bba-eba9-44f8-b180-f45358789154}</Project>
-      <Name>ServicesLayer</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DataNodeServiceClient\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataNodeServiceClient\DataNodeService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataNodeServiceClient\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataNodeServiceClient\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataNodeServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

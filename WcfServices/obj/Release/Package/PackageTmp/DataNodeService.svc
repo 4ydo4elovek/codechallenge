@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WcfServices.DataNodeService" CodeBehind="DataNodeService.svc.cs" %>

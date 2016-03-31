@@ -1,0 +1,5 @@
+C:\Work\CodeChallenge\codechallenge\Entities\bin\Release\Entities.dll
+C:\Work\CodeChallenge\codechallenge\Entities\bin\Release\Entities.pdb
+C:\Work\CodeChallenge\codechallenge\Entities\obj\Release\Entities.csprojResolveAssemblyReference.cache
+C:\Work\CodeChallenge\codechallenge\Entities\obj\Release\Entities.dll
+C:\Work\CodeChallenge\codechallenge\Entities\obj\Release\Entities.pdb

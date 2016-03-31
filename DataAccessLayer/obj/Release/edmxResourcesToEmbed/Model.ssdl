@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище GraphModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Хранилище GraphModelContainer">
+    <EntitySet Name="Lines" EntityType="Хранилище GraphModel.Lines" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Nodes" EntityType="Хранилище GraphModel.Nodes" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_NodesIdFrom" Association="Хранилище GraphModel.FK_NodesIdFrom">
+      <End Role="Nodes" EntitySet="Nodes" />
+      <End Role="Lines" EntitySet="Lines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NodesIdTo" Association="Хранилище GraphModel.FK_NodesIdTo">
+      <End Role="Nodes" EntitySet="Nodes" />
+      <End Role="Lines" EntitySet="Lines" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Lines">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NodeIdFrom" Type="int" Nullable="false" />
+    <Property Name="NodeIdTo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nodes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdUnique" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Label" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_NodesIdFrom">
+    <End Role="Nodes" Type="Хранилище GraphModel.Nodes" Multiplicity="1" />
+    <End Role="Lines" Type="Хранилище GraphModel.Lines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nodes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lines">
+        <PropertyRef Name="NodeIdFrom" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NodesIdTo">
+    <End Role="Nodes" Type="Хранилище GraphModel.Nodes" Multiplicity="1" />
+    <End Role="Lines" Type="Хранилище GraphModel.Lines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nodes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lines">
+        <PropertyRef Name="NodeIdTo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

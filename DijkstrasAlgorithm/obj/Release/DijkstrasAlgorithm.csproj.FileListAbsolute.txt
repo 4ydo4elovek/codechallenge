@@ -1,0 +1,4 @@
+C:\Work\CodeChallenge\codechallenge\DijkstrasAlgorithm\bin\Release\DijkstrasAlgorithm.dll
+C:\Work\CodeChallenge\codechallenge\DijkstrasAlgorithm\bin\Release\DijkstrasAlgorithm.pdb
+C:\Work\CodeChallenge\codechallenge\DijkstrasAlgorithm\obj\Release\DijkstrasAlgorithm.dll
+C:\Work\CodeChallenge\codechallenge\DijkstrasAlgorithm\obj\Release\DijkstrasAlgorithm.pdb

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="be6e8d46-24e8-4493-a827-fc153ea9ffb5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8081/DataNodeService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataNodeService.xsd" MetadataType="Schema" ID="a0be5369-3515-42b6-8e03-94499516d461" SourceId="1" SourceUrl="http://localhost:8081/DataNodeService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataNodeService.wsdl" MetadataType="Wsdl" ID="89d1b003-7412-4819-9437-4f8b5a746d46" SourceId="1" SourceUrl="http://localhost:8081/DataNodeService.svc?wsdl" />
+    <MetadataFile FileName="DataNodeService1.xsd" MetadataType="Schema" ID="becd0835-2a4b-4ab7-a013-6e86a6762ef6" SourceId="1" SourceUrl="http://localhost:8081/DataNodeService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataNodeService.disco" MetadataType="Disco" ID="575458f4-9ba5-46a8-a563-143b917b6c06" SourceId="1" SourceUrl="http://localhost:8081/DataNodeService.svc?disco" />
+    <MetadataFile FileName="DataNodeService2.xsd" MetadataType="Schema" ID="6456eb0d-45e8-49f2-9f43-0f35ea921b99" SourceId="1" SourceUrl="http://localhost:8081/DataNodeService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

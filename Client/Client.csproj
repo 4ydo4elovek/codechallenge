@@ -151,12 +151,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\AlgorithmClient\Reference.cs">
+    <Compile Include="Service References\AlgorithmServiceClient\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\ClientNodeService\Reference.cs">
+    <Compile Include="Service References\WebNodeServiceClient\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -238,22 +238,23 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\vis.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Service References\AlgorithmClient\AlgorithmService.wsdl" />
-    <Content Include="Service References\AlgorithmClient\item.disco" />
-    <Content Include="Service References\AlgorithmClient\configuration91.svcinfo" />
-    <Content Include="Service References\AlgorithmClient\configuration.svcinfo" />
-    <Content Include="Service References\AlgorithmClient\Reference.svcmap">
+    <Content Include="Service References\AlgorithmServiceClient\AlgorithmService.disco" />
+    <Content Include="Service References\AlgorithmServiceClient\Client.AlgorithmServiceClient.Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AlgorithmServiceClient\configuration91.svcinfo" />
+    <Content Include="Service References\AlgorithmServiceClient\configuration.svcinfo" />
+    <Content Include="Service References\AlgorithmServiceClient\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
-    <Content Include="Service References\ClientNodeService\Client.ClientNodeService.Node.datasource">
+    <Content Include="Service References\WebNodeServiceClient\Client.WebNodeServiceClient.Node.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ClientNodeService\ClientNodeService.wsdl" />
-    <Content Include="Service References\ClientNodeService\item.disco" />
-    <Content Include="Service References\ClientNodeService\configuration91.svcinfo" />
-    <Content Include="Service References\ClientNodeService\configuration.svcinfo" />
-    <Content Include="Service References\ClientNodeService\Reference.svcmap">
+    <Content Include="Service References\WebNodeServiceClient\WebNodeService.disco" />
+    <Content Include="Service References\WebNodeServiceClient\configuration91.svcinfo" />
+    <Content Include="Service References\WebNodeServiceClient\configuration.svcinfo" />
+    <Content Include="Service References\WebNodeServiceClient\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
@@ -268,23 +269,28 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <None Include="Service References\AlgorithmClient\item.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\AlgorithmClient\item1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\AlgorithmClient\item2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Views\Home\Index.cshtml" />
-    <None Include="Service References\ClientNodeService\item.xsd">
+    <Content Include="Service References\AlgorithmServiceClient\AlgorithmService.wsdl" />
+    <None Include="Service References\AlgorithmServiceClient\AlgorithmService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ClientNodeService\item1.xsd">
+    <None Include="Service References\AlgorithmServiceClient\AlgorithmService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ClientNodeService\item2.xsd">
+    <None Include="Service References\AlgorithmServiceClient\AlgorithmService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AlgorithmServiceClient\AlgorithmService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\WebNodeServiceClient\WebNodeService.wsdl" />
+    <None Include="Service References\WebNodeServiceClient\WebNodeService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WebNodeServiceClient\WebNodeService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WebNodeServiceClient\WebNodeService2.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -299,8 +305,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\AlgorithmClient\" />
-    <WCFMetadataStorage Include="Service References\ClientNodeService\" />
+    <WCFMetadataStorage Include="Service References\AlgorithmServiceClient\" />
+    <WCFMetadataStorage Include="Service References\WebNodeServiceClient\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
